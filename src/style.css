@@ -36,6 +36,24 @@
   margin: 0 auto;
   padding: 0 1.5rem;
 }
+body::-webkit-scrollbar {
+  width: 5px;
+}
+body::-webkit-scrollbar-thumb {
+  background: var(--amber);
+  border-radius: 2px;
+}
+body::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:active {
+  background: var(--amber-l);
+}
+body::-webkit-scrollbar-track {
+  background: var(--stone-1);
+}
+html, body {
+  overflow-x: hidden; /* Prevent x scrollbar */
+  scrollbar-color: var(--amber) var(--stone-1);
+}
 
 /* ─── Scroll-reveal animations ───────────────────────────────── */
 .reveal {
@@ -1408,7 +1426,7 @@ address { font-style: normal; }
   }
 
   .hero {
-    padding-bottom: 5rem;
+    padding-bottom: 4rem;
   }
 
   .hero-inner,
