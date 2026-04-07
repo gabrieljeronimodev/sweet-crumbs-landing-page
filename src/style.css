@@ -1430,6 +1430,12 @@ address { font-style: normal; }
   .steps::before {
     display: none;
   }
+  
+  .step-num {
+    height: 3rem;
+    width: 3rem;
+    margin-bottom: 1.5rem;
+  }
 
   .features-grid {
     grid-template-columns: 1fr;
