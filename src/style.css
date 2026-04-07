@@ -887,6 +887,7 @@ nav a:hover {
   gap: 0.75rem;
   padding-top: 1.25rem;
   border-top: 1px solid var(--stone-1);
+  background: none;
 }
 .reviewer img {
   width: 44px;
