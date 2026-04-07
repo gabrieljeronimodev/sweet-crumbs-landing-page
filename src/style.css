@@ -1408,7 +1408,7 @@ address { font-style: normal; }
   }
 
   .hero {
-    padding-bottom: 3rem;
+    padding-bottom: 5rem;
   }
 
   .hero-inner,
@@ -1429,7 +1429,7 @@ address { font-style: normal; }
   }
 
   #about {
-    padding-top: 3rem;
+    padding-top: 5rem;
   }
 
   .proof-item:nth-child(2), .proof-item:nth-child(3) {
