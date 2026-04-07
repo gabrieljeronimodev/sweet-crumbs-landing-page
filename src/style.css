@@ -935,9 +935,14 @@ nav a:hover {
 .carousel {
   display: flex;
   gap: 1.5rem;
-  overflow-x: hidden;
+  overflow-x: auto;
   scroll-snap-type: x mandatory;
+  scrollbar-width: none;
   padding: 0.5rem 0.25rem 1.5rem;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
 }
 .product-card {
   flex: 0 0 320px;
