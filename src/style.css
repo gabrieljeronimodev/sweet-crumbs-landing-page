@@ -935,15 +935,10 @@ nav a:hover {
 .carousel {
   display: flex;
   gap: 1.5rem;
-  overflow-x: auto;
+  overflow-x: hidden;
   scroll-snap-type: x mandatory;
   padding: 0.5rem 0.25rem 1.5rem;
-  -webkit-overflow-scrolling: touch;
 }
-.carousel::-webkit-scrollbar { height: 4px; }
-.carousel::-webkit-scrollbar-track { background: var(--stone-1); border-radius: 2px; }
-.carousel::-webkit-scrollbar-thumb { background: var(--amber); border-radius: 2px; }
-
 .product-card {
   flex: 0 0 320px;
   scroll-snap-align: start;
