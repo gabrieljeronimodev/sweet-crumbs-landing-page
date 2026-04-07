@@ -1407,6 +1407,10 @@ address { font-style: normal; }
     display: block;
   }
 
+  .hero {
+    padding-bottom: 3rem;
+  }
+
   .hero-inner,
   .story-grid,
   .problem-grid {
@@ -1422,6 +1426,14 @@ address { font-style: normal; }
   }
   .hero-float-tag {
     display: none;
+  }
+
+  #about {
+    padding-top: 3rem;
+  }
+
+  .proof-item:nth-child(2), .proof-item:nth-child(3) {
+    display:none;
   }
 
   .steps {
