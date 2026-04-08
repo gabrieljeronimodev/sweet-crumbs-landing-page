@@ -39,22 +39,26 @@ document.getElementById('year').textContent = new Date().getFullYear();
 const menuToggle   = document.getElementById('menuToggle');
 const mainNav      = document.getElementById('mainNav');
 const menuCloseBtn = document.getElementById('menuClose');
+const overlay      = document.getElementById('overlay');
 
 function openNav() {
   mainNav.classList.add('nav--open');
   menuToggle.setAttribute('aria-expanded', 'true');
   // Move focus into the overlay for keyboard / screen-reader users
   menuCloseBtn.focus();
+  overlay.classList.add('--active');
 }
 
 function closeNav() {
   mainNav.classList.remove('nav--open');
   menuToggle.setAttribute('aria-expanded', 'false');
   menuToggle.focus();
+  overlay.classList.remove('--active');
 }
 
 menuToggle.addEventListener('click', openNav);
 menuCloseBtn.addEventListener('click', closeNav);
+overlay.addEventListener('click', closeNav);
 
 // Close when any nav link is clicked (works for both mobile overlay and desktop)
 mainNav.querySelectorAll('a').forEach(link => {
