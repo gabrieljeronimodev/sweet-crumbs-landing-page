@@ -298,6 +298,7 @@ nav ul a:hover {
     padding: 5rem 2rem 2rem;
     gap: 2rem;
     transition: 200ms;
+    border-left: 1px solid var(--stone-3);
   }
   #mainNav.nav--open {
     transform: translateX(0);
@@ -312,7 +313,8 @@ nav ul a:hover {
     font-size: 2rem;
     color: var(--stone-9);
     display: block;
-    padding: 0.5rem 0;
+    padding-block: 1rem 0.5rem;
+    border-bottom: 1px solid var(--stone-3);
   }
   #mainNav ul a:hover {
     color: var(--amber-l);
