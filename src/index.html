@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sweet Crumbs – Artisan Bakery</title>
+  <meta name="description" content="Sweet Crumbs is an artisan bakery baking fresh croissants, sourdough, cinnamon rolls and more every morning since 2014. Order via WhatsApp for pickup or delivery." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sweet Crumbs – Artisan Bakery" />
+  <meta property="og:description" content="Crackling sourdough crusts, buttery layers, and the warmest coffee in the neighborhood. Order fresh every day." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- CSS and JS -->
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <script src="scripts/script.js" defer></script>
+</head>
+<body>
+
+<!-- ══════════════ HEADER ══════════════ -->
+<header>
+  <div class="container header-inner">
+    <!-- Logo -->
+    <a href="#" class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-croissant h-8 w-8" data-fg-d5jy3="1.13:16.408:/src/app/components/Header.tsx:18:11:747:33:e:Croissant::::::9uO" data-fgid-d5jy3=":r5:"><path d="m4.6 13.11 5.79-3.21c1.89-1.05 4.79 1.78 3.71 3.71l-3.22 5.81C8.8 23.16.79 15.23 4.6 13.11Z"></path><path d="m10.5 9.5-1-2.29C9.2 6.48 8.8 6 8 6H4.5C2.79 6 2 6.5 2 8.5a7.71 7.71 0 0 0 2 4.83"></path><path d="M8 6c0-1.55.24-4-2-4-2 0-2.5 2.17-2.5 4"></path><path d="m14.5 13.5 2.29 1c.73.3 1.21.7 1.21 1.5v3.5c0 1.71-.5 2.5-2.5 2.5a7.71 7.71 0 0 1-4.83-2"></path><path d="M18 16c1.55 0 4-.24 4 2 0 2-2.17 2.5-4 2.5"></path></svg>
+      <span>Sweet Crumbs</span>
+    </a>
+
+    <!-- Navbar -->
+    <nav id="mainNav" aria-label="Main navigation">
+      <button class="nav-close" id="menuClose" aria-label="Close menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <ul>
+        <li><a href="#about">Our Story</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="https://wa.me/1234567890" class="btn-primary nav-order-btn">Order Now</a>
+    </nav>
+
+    <!-- CTA Button -->
+    <a href="https://wa.me/1234567890" target="_blank" rel="noreferrer" class="btn-cta">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
+      </svg>
+      <span>Order Now</span>
+    </a>
+
+    <!-- Hamburger Menu -->
+    <button class="hamburger" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ══════════════ Overlay ══════════════ -->
+<div id="overlay" aria-hidden="true"></div>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+
+      <div class="reveal-l">
+        <div class="hero-badge"><span aria-hidden="true"></span>Baking fresh since 1982</div>
+        <h1>The smell of<br><em>Sunday morning</em><br>in a box.</h1>
+        <p>Crackling sourdough crusts, buttery layers that shatter when you bite, and the warmest cup of coffee in the neighborhood.</p>
+        <div class="hero-btns">
+          <a href="https://wa.me/1234567890" target="_blank" rel="noreferrer" class="btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Reserve on WhatsApp
+          </a>
+          <a href="#menu" class="btn-ghost">
+            See what's baking
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-img-col reveal-r delay-2">
+        <div class="hero-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1579005007646-4227f7820d5c?w=900&q=80"
+            alt="Freshly baked artisan breads and pastries on a table"
+            loading="eager"
+            fetchpriority="high"
+            width="900"
+            height="1200"
+          />
+        </div>
+        <div class="hero-float-tag" aria-hidden="true">
+          <small>Just out</small>
+          <strong>Almond Babka</strong>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="hero-bg-glow" aria-hidden="true"></div>
+</section>
+
+<!-- ══════════════ PROOF BAR ══════════════ -->
+<div class="proof-bar" role="region" aria-label="Key highlights">
+  <div class="container proof-inner">
+    <div class="proof-item">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      4.9/5 Average Local Rating
+    </div>
+    <div class="proof-item">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Baked Fresh Every Morning at 6 AM
+    </div>
+    <div class="proof-item">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+      100% Organic Local Flour
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ OUR STORY ══════════════ -->
+<section id="about">
+  <div class="container story-grid">
+
+    <div class="reveal-l">
+      <span class="section-label">Our Story</span>
+      <h2 class="section-title">Three generations of<br><em>flour and water.</em></h2>
+      <div class="story-body">
+        <p>It started in 1982 when my grandfather, Antonio, brought his 50-year-old sourdough starter from a small village in Italy. He believed that bread wasn't just food; it was the centerpiece of family life.</p>
+        <p>When we opened Sweet Crumbs in this exact neighborhood over a decade ago, we promised to honor his tradition. We refused to automate. We refused to use commercial yeast. We still mix our dough by hand, feeling the humidity and temperature of the air to know exactly when it's ready.</p>
+        <p class="story-highlight">We aren't just baking bread. We are preserving an art form.</p>
+      </div>
+    </div>
+
+    <div class="reveal-r delay-2">
+      <div class="story-img-wrap">
+        <div class="story-img-main">
+          <img src="https://images.unsplash.com/photo-1675285458906-26993548039c?w=800&q=80" alt="Head baker smiling in the bakery" loading="lazy" width="800" height="1067" />
+        </div>
+        <div class="story-img-thumb" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1765448808777-bb950228e437?w=400&q=80" alt="" loading="lazy" width="400" height="400" />
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════ PROBLEM SECTION ══════════════ -->
+<section id="problem">
+  <div class="container problem-grid">
+
+    <div class="reveal-l">
+      <div class="problem-img-wrap">
+        <div class="problem-img-main">
+          <img src="https://images.unsplash.com/photo-1770040792240-a39c2976f73e?w=800&q=80" alt="Baker's hands kneading fresh dough" loading="lazy" width="800" height="1000" />
+        </div>
+        <figure class="problem-quote">
+          <blockquote>"Real bread takes time. It cannot be rushed in a factory. It needs warmth, care, and a human touch."</blockquote>
+          <figcaption>Maria, Head Baker</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="reveal-r delay-2">
+      <h2 class="section-title">Do you remember what <em>real bread</em> tastes like?</h2>
+      <div class="problem-body">
+        <p>Walk down any supermarket aisle, and you'll find shelves packed with "pastries" designed to last for weeks. They look perfect, but they lack soul. They lack the irresistible scent of browned butter and the delicate, shattering crunch of layers folded by hand.</p>
+        <p>At Sweet Crumbs, we don't believe in shortcuts. No dough conditioners, no artificial preservatives, and no mass production.</p>
+        <p class="problem-highlight">We believe your morning coffee deserves better. We believe you deserve a pastry that was crafted before dawn, specifically for you to enjoy today.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════ HOW IT WORKS ══════════════ -->
+<section id="process">
+  <div class="container">
+    <div class="process-header">
+      <div class="reveal-l">
+        <div class="process-label-row">
+          <div class="divider" aria-hidden="true"></div>
+          <span class="section-label">Our Process</span>
+        </div>
+        <h2 class="section-title">From our ovens<br>to your hands.</h2>
+      </div>
+      <p class="reveal-r delay-2">No complicated apps. No waiting in long lines. Just genuine baking and a simple message to get yours.</p>
+    </div>
+
+    <ol class="steps" aria-label="Our baking process">
+      <li class="step reveal delay-1">
+        <div class="step-num" aria-hidden="true"><span>01</span></div>
+        <div class="step-img">
+          <img src="https://images.unsplash.com/photo-1586270211622-781b5dda0d4b?w=600&q=80" alt="Baker mixing dough by hand at midnight" loading="lazy" width="600" height="750" />
+        </div>
+        <h3>The Midnight Mix</h3>
+        <p>While the city sleeps, our bakers are hand-mixing organic flour and resting our 50-year-old sourdough starter.</p>
+      </li>
+      <li class="step reveal delay-2">
+        <div class="step-num" aria-hidden="true"><span>02</span></div>
+        <div class="step-img">
+          <img src="https://images.unsplash.com/photo-1772758631775-62f1912fe0f7?w=600&q=80" alt="Fresh bread coming out of stone oven at sunrise" loading="lazy" width="600" height="750" />
+        </div>
+        <h3>The Morning Bake</h3>
+        <p>As the sun rises, everything goes into our stone ovens. The neighborhood fills with the scent of butter and caramelized sugar.</p>
+      </li>
+      <li class="step reveal delay-3">
+        <div class="step-num" aria-hidden="true"><span>03</span></div>
+        <div class="step-img">
+          <img src="https://images.unsplash.com/photo-1594400316172-d7ca545d9bf3?w=600&q=80" alt="Baker handing a bag of fresh bread to a customer" loading="lazy" width="600" height="750" />
+        </div>
+        <h3>The Warm Handover</h3>
+        <p>You text us your cravings. We pack them gently in a warm paper bag. You pick it up, or we bring it straight to your doorstep.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══════════════ FEATURES / INGREDIENTS ══════════════ -->
+<section id="ingredients">
+  <div class="container">
+    <div class="features-header reveal">
+      <h2 class="section-title">No shortcuts.<br><em>No compromises.</em></h2>
+      <p>If you start with average ingredients, you end up with average bread. We refuse to settle.</p>
+    </div>
+    <div class="features-grid">
+
+      <article class="feature-card reveal delay-1">
+        <img src="https://images.unsplash.com/photo-1551794854-4199c263ef3f?w=800&q=80" alt="Flour dusting on a dark table showing texture" loading="lazy" width="800" height="800" />
+        <div class="feature-card-body">
+          <div class="feature-line" aria-hidden="true"></div>
+          <h3>100% Local Stone-Milled Flour</h3>
+          <p>Sourced from farms less than 50 miles away. No bleaches, no additives, just pure wheat.</p>
+        </div>
+      </article>
+
+      <article class="feature-card reveal delay-2">
+        <img src="https://images.unsplash.com/photo-1602198905362-b0ff3630686d?w=800&q=80" alt="Artisan baker's hands folding croissant dough" loading="lazy" width="800" height="800" />
+        <div class="feature-card-body">
+          <div class="feature-line" aria-hidden="true"></div>
+          <h3>Cultured Pasture Butter</h3>
+          <p>The secret to our shattering layers. We use 84% butterfat European-style butter, rolled by hand.</p>
+        </div>
+      </article>
+
+      <article class="feature-card reveal delay-3">
+        <img src="https://images.unsplash.com/photo-1756361946794-d7976ff5f765?w=800&q=80" alt="Fresh organic eggs in a basket from free-roaming hens" loading="lazy" width="800" height="800" />
+        <div class="feature-card-body">
+          <div class="feature-line" aria-hidden="true"></div>
+          <h3>Farm Fresh Organic Eggs</h3>
+          <p>Golden yolks make golden brioche. Delivered fresh twice a week from happy, free-roaming hens.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ TESTIMONIALS ══════════════ -->
+<section id="reviews">
+  <div class="container">
+    <div class="reviews-header reveal">
+      <div class="avatar-row" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1595085610896-fb31cfd5d4b7?w=120&q=80" alt="" loading="lazy" width="48" height="48" />
+        <img src="https://images.unsplash.com/photo-1764816657425-b3c79b616d14?w=120&q=80" alt="" loading="lazy" width="48" height="48" />
+        <img src="https://images.unsplash.com/photo-1740362381413-21a42bc17283?w=120&q=80" alt="" loading="lazy" width="48" height="48" />
+      </div>
+      <h2 class="section-title">Loved by the <em>locals</em>.</h2>
+      <p>We don't need a massive marketing budget. Our community speaks for the bread.</p>
+    </div>
+
+    <div class="reviews-grid">
+
+      <article class="review-card reveal delay-1">
+        <div class="stars" aria-label="5 out of 5 stars"></div>
+        <blockquote>"The croissants here are literally the best I've had outside of Paris. I buy a box every single Saturday."</blockquote>
+        <footer class="reviewer">
+          <img src="https://images.unsplash.com/photo-1595085610896-fb31cfd5d4b7?w=120&q=80" alt="Sarah J." loading="lazy" width="44" height="44" />
+          <div>
+            <strong>Sarah J.</strong>
+            <small>Downtown</small>
+          </div>
+        </footer>
+      </article>
+
+      <article class="review-card reveal delay-2">
+        <div class="stars" aria-label="5 out of 5 stars"></div>
+        <blockquote>"Their sourdough has changed my life. I don't buy bread from the supermarket anymore. WhatsApp ordering is so easy."</blockquote>
+        <footer class="reviewer">
+          <img src="https://images.unsplash.com/photo-1764816657425-b3c79b616d14?w=120&q=80" alt="David C." loading="lazy" width="44" height="44" />
+          <div>
+            <strong>David C.</strong>
+            <small>Local Resident</small>
+          </div>
+        </footer>
+      </article>
+
+      <article class="review-card reveal delay-3">
+        <div class="stars" aria-label="5 out of 5 stars"></div>
+        <blockquote>"You can taste the butter, the care, and the real ingredients. The cinnamon rolls sell out for a reason!"</blockquote>
+        <footer class="reviewer">
+          <img src="https://images.unsplash.com/photo-1740362381413-21a42bc17283?w=120&q=80" alt="Maria R." loading="lazy" width="44" height="44" />
+          <div>
+            <strong>Maria R.</strong>
+            <small>Food Blogger</small>
+          </div>
+        </footer>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PRODUCT CAROUSEL / MENU ══════════════ -->
+<section id="menu">
+  <div class="container">
+    <h2 class="section-title reveal">Our Signatures</h2>
+    <p class="menu-subtitle reveal delay-1">Handcrafted daily with passion. Browse our most loved items and order directly via WhatsApp for quick pickup or delivery.</p>
+
+    <div class="carousel-wrap reveal delay-2">
+      <div class="carousel" id="productCarousel" role="region" aria-label="Our signature products">
+
+        <article class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1658740877399-0422c2addd6c?w=640&q=80" alt="Classic Butter Croissant — flaky and golden" loading="lazy" width="640" height="480" />
+            <span class="product-tag">Bestseller</span>
+          </div>
+          <div class="product-body">
+            <div class="product-row">
+              <h3>Classic Butter Croissant</h3>
+              <span class="product-price">$4.50</span>
+            </div>
+            <p>Flaky, golden, and incredibly buttery. Baked fresh every morning using imported French butter.</p>
+            <a href="https://wa.me/1234567890?text=I'd%20like%20to%20order%20the%20Classic%20Butter%20Croissant" target="_blank" rel="noreferrer" class="btn-order">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              Order on WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1767065888047-b2264073364b?w=640&q=80" alt="Artisan Sourdough Loaf — crusty and tangy" loading="lazy" width="640" height="480" />
+            <span class="product-tag">Fresh</span>
+          </div>
+          <div class="product-body">
+            <div class="product-row">
+              <h3>Artisan Sourdough Loaf</h3>
+              <span class="product-price">$8.00</span>
+            </div>
+            <p>Crusty on the outside, soft and tangy on the inside. Fermented for 48 hours for maximum flavor.</p>
+            <a href="https://wa.me/1234567890?text=I'd%20like%20to%20order%20the%20Artisan%20Sourdough%20Loaf" target="_blank" rel="noreferrer" class="btn-order">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              Order on WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1613478881398-1d9d2cdb5067?w=640&q=80" alt="Warm Cinnamon Roll with cream cheese frosting" loading="lazy" width="640" height="480" />
+            <span class="product-tag">Popular</span>
+          </div>
+          <div class="product-body">
+            <div class="product-row">
+              <h3>Warm Cinnamon Roll</h3>
+              <span class="product-price">$5.50</span>
+            </div>
+            <p>Soft, gooey center packed with Makara cinnamon and topped with our signature cream cheese frosting.</p>
+            <a href="https://wa.me/1234567890?text=I'd%20like%20to%20order%20a%20Cinnamon%20Roll" target="_blank" rel="noreferrer" class="btn-order">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              Order on WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1653491888623-6f38a759442f?w=640&q=80" alt="Fresh Berry Tart with vanilla custard and seasonal berries" loading="lazy" width="640" height="480" />
+            <span class="product-tag">Seasonal</span>
+          </div>
+          <div class="product-body">
+            <div class="product-row">
+              <h3>Fresh Berry Tart</h3>
+              <span class="product-price">$6.50</span>
+            </div>
+            <p>Buttery shortbread crust filled with vanilla custard and topped with seasonal fresh berries.</p>
+            <a href="https://wa.me/1234567890?text=I'd%20like%20to%20order%20the%20Fresh%20Berry%20Tart" target="_blank" rel="noreferrer" class="btn-order">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              Order on WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1737065175923-7b05466a2c1a?w=640&q=80" alt="Rustic French Baguette with crisp crust" loading="lazy" width="640" height="480" />
+            <span class="product-tag">Daily</span>
+          </div>
+          <div class="product-body">
+            <div class="product-row">
+              <h3>Rustic French Baguette</h3>
+              <span class="product-price">$3.50</span>
+            </div>
+            <p>Traditional long loaf with a crisp crust and a chewy, airy interior. Baked on a stone hearth.</p>
+            <a href="https://wa.me/1234567890?text=I'd%20like%20to%20order%20a%20French%20Baguette" target="_blank" rel="noreferrer" class="btn-order">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              Order on WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1694224382283-05e6d8fc235f?w=640&q=80" alt="Signature Vanilla Bean Cake with buttercream frosting" loading="lazy" width="640" height="480" />
+            <span class="product-tag">Pre-order</span>
+          </div>
+          <div class="product-body">
+            <div class="product-row">
+              <h3>Signature Vanilla Bean Cake</h3>
+              <span class="product-price">$45.00</span>
+            </div>
+            <p>Layers of moist vanilla sponge with rich buttercream frosting. Perfect for any special occasion.</p>
+            <a href="https://wa.me/1234567890?text=I'd%20like%20to%20pre-order%20the%20Vanilla%20Bean%20Cake" target="_blank" rel="noreferrer" class="btn-order">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              Order on WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1661417115373-e337c7754554?w=640&q=80" alt="Warm Chocolate Chip Cookie — crispy edges, gooey center" loading="lazy" width="640" height="480" />
+            <span class="product-tag">Classic</span>
+          </div>
+          <div class="product-body">
+            <div class="product-row">
+              <h3>Chocolate Chip Cookie</h3>
+              <span class="product-price">$3.50</span>
+            </div>
+            <p>Crispy on the edges, soft and gooey in the center. Made with premium dark chocolate chunks.</p>
+            <a href="https://wa.me/1234567890?text=I'd%20like%20to%20order%20a%20Chocolate%20Chip%20Cookie" target="_blank" rel="noreferrer" class="btn-order">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              Order on WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1588914683573-8addfd1eb58a?w=640&q=80" alt="Colorful assorted macarons stacked in a box" loading="lazy" width="640" height="480" />
+            <span class="product-tag">Gift Idea</span>
+          </div>
+          <div class="product-body">
+            <div class="product-row">
+              <h3>Assorted Macarons Box</h3>
+              <span class="product-price">$24.00</span>
+            </div>
+            <p>A dozen of our delicate French macarons in assorted flavors including pistachio, raspberry, and chocolate.</p>
+            <a href="https://wa.me/1234567890?text=I'd%20like%20to%20order%20the%20Assorted%20Macarons%20Box" target="_blank" rel="noreferrer" class="btn-order">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              Order on WhatsApp
+            </a>
+          </div>
+        </article>
+
+      </div>
+      <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Product carousel navigation"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FAQ ══════════════ -->
+<section id="faq">
+  <div class="container">
+    <h2 class="section-title reveal">Frequently Asked Questions</h2>
+    <p class="faq-subtitle reveal delay-1">Got questions? We've got answers. If you can't find what you're looking for, feel free to send us a message.</p>
+
+    <div class="faq-list" role="list">
+
+      <div class="faq-item open reveal delay-1" role="listitem">
+        <button class="faq-question" aria-expanded="true">
+          <span>How do I place an order?</span>
+          <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">It's simple! Browse our menu above, decide what you'd like, and click any 'Order on WhatsApp' button. We'll confirm availability, finalize details, and give you a pickup/delivery time.</div>
+      </div>
+
+      <div class="faq-item reveal delay-2" role="listitem">
+        <button class="faq-question" aria-expanded="false">
+          <span>Do you offer delivery or just pickup?</span>
+          <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">We offer both! You can pick up directly from our bakery, or we can arrange local delivery within a 10-mile radius. Delivery fees may apply depending on distance.</div>
+      </div>
+
+      <div class="faq-item reveal delay-3" role="listitem">
+        <button class="faq-question" aria-expanded="false">
+          <span>Are your pastries fresh every day?</span>
+          <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">Absolutely. We stand by our 100% fresh guarantee. Our bakers start at 3 AM every single day. Any unsold items are donated to local shelters at closing time.</div>
+      </div>
+
+      <div class="faq-item reveal delay-4" role="listitem">
+        <button class="faq-question" aria-expanded="false">
+          <span>Do you have gluten-free or vegan options?</span>
+          <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">Yes, we do! While our main focus is traditional baking, we have dedicated a specific section of our menu to delicious gluten-free and vegan alternatives. Just ask us on WhatsApp!</div>
+      </div>
+
+      <div class="faq-item reveal delay-4" role="listitem">
+        <button class="faq-question" aria-expanded="false">
+          <span>Can I order custom cakes for events?</span>
+          <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">Of course! For custom cakes and large event catering, please contact us at least 72 hours in advance so we can ensure everything is perfect for your special day.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FINAL CTA ══════════════ -->
+<section id="contact" class="cta-section">
+  <div class="cta-bg" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1598672739870-510404fc00a1?w=1600&q=80" alt="" loading="lazy" width="1600" height="900" />
+  </div>
+  <div class="cta-body">
+    <div class="cta-live reveal">
+      <span aria-hidden="true"></span>
+      We are baking right now
+    </div>
+    <h2 class="reveal delay-1">Your daily treat<br><em>is just a text away.</em></h2>
+    <p class="reveal delay-2">Skip the line, reserve your favorites before they sell out, and swing by to pick up your box of happiness.</p>
+    <a href="https://wa.me/1234567890" target="_blank" rel="noreferrer" class="btn-cta-big reveal delay-3">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      Send us a WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-croissant h-8 w-8" data-fg-d5jy3="1.13:16.408:/src/app/components/Header.tsx:18:11:747:33:e:Croissant::::::9uO" data-fgid-d5jy3=":r5:"><path d="m4.6 13.11 5.79-3.21c1.89-1.05 4.79 1.78 3.71 3.71l-3.22 5.81C8.8 23.16.79 15.23 4.6 13.11Z"></path><path d="m10.5 9.5-1-2.29C9.2 6.48 8.8 6 8 6H4.5C2.79 6 2 6.5 2 8.5a7.71 7.71 0 0 0 2 4.83"></path><path d="M8 6c0-1.55.24-4-2-4-2 0-2.5 2.17-2.5 4"></path><path d="m14.5 13.5 2.29 1c.73.3 1.21.7 1.21 1.5v3.5c0 1.71-.5 2.5-2.5 2.5a7.71 7.71 0 0 1-4.83-2"></path><path d="M18 16c1.55 0 4-.24 4 2 0 2-2.17 2.5-4 2.5"></path></svg>
+          <span>Sweet Crumbs</span>
+        </a>
+        <p>Baking memories since 1982. We believe in honest ingredients, traditional techniques, and the simple joy of a fresh pastry.</p>
+        <div class="social-row">
+          <a href="#" class="social-btn" aria-label="Follow us on Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="Follow us on Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="Follow us on Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">Our Story</a></li>
+          <li><a href="#menu">Full Menu</a></li>
+          <li><a href="#contact">Catering</a></li>
+          <li><a href="#contact">Careers</a></li>
+        </ul>
+      </div>
+
+      <address class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>123 Baker Street<br>Oven City, BC 45678</span>
+        </div>
+        <div class="contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.64 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.9-.81a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+15551234567">(555) 123-4567</a>
+        </div>
+        <div class="contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:hello@sweetcrumbs.com">hello@sweetcrumbs.com</a>
+        </div>
+      </address>
+
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <dl class="hours-list">
+          <div class="hours-row"><dt>Mon – Fri</dt><dd>7:00 AM – 6:00 PM</dd></div>
+          <div class="hours-row"><dt>Saturday</dt><dd>8:00 AM – 5:00 PM</dd></div>
+          <div class="hours-row hours-closed"><dt>Sunday</dt><dd>Closed</dd></div>
+        </dl>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Sweet Crumbs Bakery. All rights reserved.</p>
+      <nav class="footer-links" aria-label="Legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
