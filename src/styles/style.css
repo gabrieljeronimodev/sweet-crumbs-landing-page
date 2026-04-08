@@ -269,6 +269,9 @@ nav ul a:hover {
   margin-block: 5px;
   transition: 0.3s;
 }
+.hamburger:hover span {
+  background: var(--amber-l);
+}
 
 /* ─── Mobile nav overlay ─────────────────────────────────────── */
 /*
@@ -282,7 +285,7 @@ nav ul a:hover {
     display: block;
   }
   #mainNav {
-    display: none;
+    display: flex;
     height: 100dvh;
     width: min(500px, 100%);
     position: fixed;
@@ -294,10 +297,9 @@ nav ul a:hover {
     flex-direction: column;
     padding: 5rem 2rem 2rem;
     gap: 2rem;
-    transition: transform 3s;
+    transition: 200ms;
   }
   #mainNav.nav--open {
-    display: flex;
     transform: translateX(0);
   }
 
