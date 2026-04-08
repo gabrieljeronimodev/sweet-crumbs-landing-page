@@ -393,7 +393,6 @@ nav ul a:hover {
   background: var(--amber-l);
   flex-shrink: 0;
 }
-
 .hero h1 {
   font-family: var(--serif);
   font-size: clamp(2.8rem, 5.5vw, 4.5rem);
@@ -582,7 +581,7 @@ nav ul a:hover {
 
 /* ─── Problem section ────────────────────────────────────────── */
 #problem {
-  padding: 7rem 0;
+  padding-block: 7rem;
   background: var(--cream);
 }
 
@@ -1484,10 +1483,10 @@ address { font-style: normal; }
     display: block;
   }
 
+  /* ─── Hero ───────────────────────────────────────────────────── */
   .hero {
     padding-bottom: 4rem;
   }
-
   .hero-inner,
   .story-grid,
   .problem-grid {
@@ -1505,14 +1504,41 @@ address { font-style: normal; }
     display: none;
   }
 
-  #about {
-    padding-top: 5rem;
-  }
-
+  /* ─── Proof bar ──────────────────────────────────────────────── */
   .proof-item:nth-child(2), .proof-item:nth-child(3) {
-    display:none;
+    display: none;
   }
 
+  /* ─── Our Story ──────────────────────────────────────────────── */
+  #about {
+    padding-block: 5rem 4.5rem;
+  }
+  .story-img-thumb {
+    width: 7rem;
+    left: -1rem;
+    bottom: -1.5rem;
+  }
+
+  /* ─── Problem section ────────────────────────────────────────── */
+  #problem {
+    padding-block: 4.5rem;
+  }
+  .problem-quote {
+    right: -0.5rem;
+    max-width: 220px;
+  }
+  .process-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .problem-grid {
+    gap: 6rem;
+  }
+
+  /* ─── How It Works ───────────────────────────────────────────── */
+  #process {
+    padding-block: 4.5rem;
+  }
   .steps {
     grid-template-columns: 1fr;
   }
@@ -1526,10 +1552,19 @@ address { font-style: normal; }
     margin-bottom: 1.5rem;
   }
 
+  /* ─── Features / Ingredients ─────────────────────────────────── */
+  #ingredients {
+    padding-block: 4.5rem;
+  }
+
   .features-grid {
     grid-template-columns: 1fr;
   }
 
+  /* ─── Testimonials ───────────────────────────────────────────── */
+  #reviews {
+    padding-block: 4.5rem;
+  }
   .reviews-grid {
     grid-template-columns: 1fr;
   }
@@ -1537,25 +1572,26 @@ address { font-style: normal; }
     transform: none !important;
   }
 
+  /* ─── Product carousel / Menu ────────────────────────────────── */
+  #menu {
+    padding-block: 4.5rem;
+  }
   .product-card {
     flex: 0 0 80vw;
   }
 
-  .footer-grid {
-    grid-template-columns: 1fr;
+  /* ─── FAQ ────────────────────────────────────────────────────── */
+  #faq {
+    padding-block: 4.5rem;
   }
 
-  .story-img-thumb {
-    width: 7rem;
-    left: -1rem;
-    bottom: -1.5rem;
+  /* ─── Final CTA ──────────────────────────────────────────────── */
+  .cta-section {
+    padding-block: 4rem;
   }
-  .problem-quote {
-    right: -0.5rem;
-    max-width: 220px;
-  }
-  .process-header {
-    flex-direction: column;
-    align-items: flex-start;
+
+  /* ─── Footer ─────────────────────────────────────────────────── */
+  .footer-grid {
+    grid-template-columns: 1fr;
   }
 }
