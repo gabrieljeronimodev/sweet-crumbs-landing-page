@@ -36,19 +36,19 @@ function rafThrottle(fn) {
 document.getElementById('year').textContent = new Date().getFullYear();
 
 /* ─── Mobile navigation ──────────────────────────────────────── */
-const menuToggle  = document.getElementById('menuToggle');
-const mobileNav   = document.getElementById('mobileNav');
+const menuToggle   = document.getElementById('menuToggle');
+const mainNav      = document.getElementById('mainNav');
 const menuCloseBtn = document.getElementById('menuClose');
 
 function openNav() {
-  mobileNav.hidden = false;
+  mainNav.classList.add('nav--open');
   menuToggle.setAttribute('aria-expanded', 'true');
-  // Move focus into the dialog for keyboard / screen-reader users
+  // Move focus into the overlay for keyboard / screen-reader users
   menuCloseBtn.focus();
 }
 
 function closeNav() {
-  mobileNav.hidden = true;
+  mainNav.classList.remove('nav--open');
   menuToggle.setAttribute('aria-expanded', 'false');
   menuToggle.focus();
 }
@@ -56,14 +56,16 @@ function closeNav() {
 menuToggle.addEventListener('click', openNav);
 menuCloseBtn.addEventListener('click', closeNav);
 
-// Close when any in-nav link is clicked
-document.querySelectorAll('.mobile-link').forEach(link => {
-  link.addEventListener('click', closeNav);
+// Close when any nav link is clicked (works for both mobile overlay and desktop)
+mainNav.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    if (mainNav.classList.contains('nav--open')) closeNav();
+  });
 });
 
 // Close on Escape key
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && !mobileNav.hidden) closeNav();
+  if (e.key === 'Escape' && mainNav.classList.contains('nav--open')) closeNav();
 });
 
 /* ─── Scroll-reveal (IntersectionObserver) ───────────────────── */

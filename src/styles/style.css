@@ -209,18 +209,26 @@ header {
   color: var(--stone-9);
 }
 
-nav {
+/* ─── Nav (desktop) ──────────────────────────────────────────── */
+nav ul {
   display: flex;
   gap: 2rem;
+  list-style: none;
 }
-nav a {
+nav ul a {
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--stone-5);
   transition: color 0.2s;
 }
-nav a:hover {
+nav ul a:hover {
   color: var(--amber);
+}
+
+/* Elements visible only in the mobile overlay */
+.nav-close,
+.nav-order-btn {
+  display: none;
 }
 
 .btn-cta {
@@ -251,50 +259,84 @@ nav a:hover {
   border: none;
   cursor: pointer;
   padding: 0.25rem;
+  z-index: 10;
 }
 .hamburger span {
-  display: block;
+  display: none;
   width: 22px;
   height: 2px;
   background: var(--stone-7);
-  margin: 5px 0;
+  margin-block: 5px;
   transition: 0.3s;
 }
 
-/* ─── Mobile nav ─────────────────────────────────────────────── */
-.mobile-nav {
-  position: fixed;
-  inset: 0;
-  z-index: 200;
-  background: var(--cream);
-  display: flex;
-  flex-direction: column;
-  padding: 5rem 2rem 2rem;
-  gap: 2rem;
-}
-.mobile-nav[hidden] {
-  display: none;
-}
-.mobile-nav a {
-  font-family: var(--serif);
-  font-size: 2rem;
-  color: var(--stone-9);
-}
-.mobile-nav .btn-primary {
-  width: max-content;
-}
-.mobile-nav-close {
-  position: absolute;
-  top: 1.25rem;
-  right: 1.25rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--stone-7);
-}
-.mobile-nav-close svg {
-  width: 28px;
-  height: 28px;
+/* ─── Mobile nav overlay ─────────────────────────────────────── */
+/*
+ * The #mainNav is a normal inline element on desktop.
+ * On mobile it becomes a full-screen overlay when .nav--open is toggled.
+ * display:none when closed means links are unreachable by keyboard —
+ * no extra inert/aria-hidden needed.
+ */
+@media (max-width: 768px) {
+  .hamburger, .hamburger span {
+    display: block;
+  }
+  #mainNav {
+    display: none;
+    height: 100dvh;
+    width: min(500px, 100%);
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    z-index: 100;
+    background: var(--cream);
+    flex-direction: column;
+    padding: 5rem 2rem 2rem;
+    gap: 2rem;
+    transition: transform 3s;
+  }
+  #mainNav.nav--open {
+    display: flex;
+    transform: translateX(0);
+  }
+
+  #mainNav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+  #mainNav ul a {
+    font-family: var(--serif);
+    font-size: 2rem;
+    color: var(--stone-9);
+    display: block;
+    padding: 0.5rem 0;
+  }
+  #mainNav ul a:hover {
+    color: var(--amber-l);
+  }
+
+  .nav-close {
+    display: flex;
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--stone-7);
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-close svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .nav-order-btn {
+    display: inline-flex;
+    width: max-content;
+  }
 }
 
 /* ─── Hero ───────────────────────────────────────────────────── */
@@ -1417,8 +1459,8 @@ address { font-style: normal; }
 }
 
 @media (max-width: 768px) {
-  nav,
-  .btn-cta span {
+  /* btn-cta hidden on mobile — Order Now is inside the nav overlay */
+  .btn-cta {
     display: none;
   }
   .hamburger {
