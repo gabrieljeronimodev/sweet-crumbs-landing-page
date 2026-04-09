@@ -1,3 +1,10 @@
+<!-- Language -->
+<div align="right">
+  <a href="./README.md">🇺🇸 English</a>
+  &nbsp;|&nbsp;
+  <a href="./README.pt-BR.md">🇧🇷 Português</a>
+</div>
+
 # 🍞 Sweet Crumbs
 
 Uma landing page estática para uma padaria artesanal fictícia. Sem frameworks, sem ferramentas de build, sem dependências — só HTML, CSS e JavaScript puro. Abra o `index.html` e funciona.

@@ -1,3 +1,9 @@
+<div align="right">
+  <a href="./README.md">🇺🇸 English</a>
+  &nbsp;|&nbsp;
+  <a href="./README.pt-BR.md">🇧🇷 Português</a>
+</div>
+
 # 🍞 Sweet Crumbs
 
 A static landing page for a fictional artisan bakery. No frameworks, no build tools, no dependencies just HTML, CSS, and vanilla JavaScript. Open `index.html` and it works.
