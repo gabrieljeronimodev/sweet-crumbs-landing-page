@@ -9,6 +9,8 @@
 
 Uma landing page estática para uma padaria artesanal fictícia. Sem frameworks, sem ferramentas de build, sem dependências — só HTML, CSS e JavaScript puro. Abra o `index.html` e funciona.
 
+Visualização: <a href="https://gabrieljeronimodev.github.io/sweet-crumbs-landing-page/" target="_blank">gabrieljeronimodev.github.io/sweet-crumbs-landing-page/</a>
+
 ---
 
 ## O que tem na página

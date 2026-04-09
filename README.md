@@ -8,6 +8,8 @@
 
 A static landing page for a fictional artisan bakery. No frameworks, no build tools, no dependencies just HTML, CSS, and vanilla JavaScript. Open `index.html` and it works.
 
+Preview: <a href="https://gabrieljeronimodev.github.io/sweet-crumbs-landing-page/" target="_blank">gabrieljeronimodev.github.io/sweet-crumbs-landing-page/</a>
+
 ---
 
 ## What's on the page
